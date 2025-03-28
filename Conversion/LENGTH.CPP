@@ -1,0 +1,95 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main(){
+	clrscr();
+	float length;
+	int choice;
+	printf("\nSelect the unit of length to convert:\n");
+	printf("\t[1] Inches\n");
+	printf("\t[2] Feet\n");
+	printf("\t[3] Yard\n");
+	printf("\t[4] Centimeter\n");
+	printf("\t[5] Millimeter\n");
+	printf("\t[6] Meter\n");
+	printf("\t[7] Kilometer\n");
+	printf("\tSelect: ");
+	scanf("%d",&choice);
+	printf("\tEnter length to convert: ");
+	scanf("%f", &length);
+
+	switch(choice){
+	case 1: //inches
+		printf("\n\t%.2f inches is equivalent to:\n", length);
+		printf("\t\t - %.2f feets\n", length/12);
+		printf("\t\t - %.2f yards\n", length/36);
+		printf("\t\t - %.2f centimeters\n", length*2.54);
+		printf("\t\t - %.2f millimeters\n", length*25.4);
+		printf("\t\t - %.2f meters\n", length*0.0254);
+		printf("\t\t - %.2f kilometers\n", length * 0.0000254);
+	break;
+
+	case 2: //feets
+		printf("\n\t%.2f feets is equivalent to:\n", length);
+		printf("\t\t - %.2f inches\n", length*12);
+		printf("\t\t - %.2f yards\n", length/3);
+		printf("\t\t - %.2f centimeters\n", length* 30.48);
+		printf("\t\t - %.2f millimeters\n", length* 304.8);
+		printf("\t\t - %.2f meters\n", length* 0.3048);
+		printf("\t\t - %.2f kilometers\n", length* 0.0003048);
+	break;
+
+	case 3: //yards
+		printf("\n\t%.2f yards is equivalent to:\n", length);
+		printf("\t\t - %.2f inches\n", length* 36.0);
+		printf("\t\t - %.2f feets\n", length* 3.0);
+		printf("\t\t - %.2f centimeters\n", length* 91.44);
+		printf("\t\t - %.2f millimeters\n", length * 914.4);
+		printf("\t\t - %.2f meters\n", length* 0.9144);
+		printf("\t\t - %.2f kilometers\n", length * 0.0009144);
+	break;
+
+	case 4: //centimeters
+		printf("\n\t%.2f centimeters is equivalent to:\n", length);
+		printf("\t\t - %.2f inches\n", length/ 2.54);
+		printf("\t\t - %.2f feets\n", length/ 30.48);
+		printf("\t\t - %.2f yards\n", length/ 91.44);
+		printf("\t\t - %.2f millimeters\n", length* 10);
+		printf("\t\t - %.2f meters\n", length/ 100);
+		printf("\t\t - %.2f kilometers\n", length/ 100000);
+	break;
+
+	case 5: //millimeters
+		printf("\n\t%.2f millimeters is equivalent to:\n", length);
+		printf("\t\t - %.2f inches\n", length/ 25.4);
+		printf("\t\t - %.2f feets\n", length/ 304.8);
+		printf("\t\t - %.2f yards\n", length/ 914.4);
+		printf("\t\t - %.2f centimeters\n", length/ 10);
+		printf("\t\t - %.2f meters\n", length/ 1000);
+		printf("\t\t - %.2f kilometers\n", length / 1000000);
+	break;
+
+	case 6: //meters
+		printf("\n\t%.2f meters is equivalent to:\n", length);
+		printf("\t\t - %.2f inches\n", length* 39.37);
+		printf("\t\t - %.2f feets\n", length* 3.281);
+		printf("\t\t - %.2f yards\n", length* 1.094);
+		printf("\t\t - %.2f centimeters\n", length* 100);
+		printf("\t\t - %.2f millimeters\n", length* 1000);
+		printf("\t\t - %.2f kilometers\n", length/ 1000);
+	break;
+
+	case 7: //kilometers
+		printf("\n\t%.2f kilometers is equivalent to:\n", length);
+		printf("\t\t - %.2f inches\n", length* 39370.1);
+		printf("\t\t - %.2f feets\n", length* 3280.84);
+		printf("\t\t - %.2f yards\n", length* 1093.61);
+		printf("\t\t - %.2f centimeters\n", length* 100000);
+		printf("\t\t - %.2f millimeters\n", length* 1000000);
+		printf("\t\t - %.2f meters\n", length * 1000);
+	break;
+	default: printf("None");
+	}
+	getch();
+	return 0;
+}

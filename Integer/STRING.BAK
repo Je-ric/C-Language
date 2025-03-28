@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Example strings
+    char str1[] = "Hello";
+    char str2[] = "World!";
+    char str3[] = "Love";
+    char str4[] = "Goodmorning";
+    char str5[] = "Goodbye";
+    char str6[] = "Goodnight";
+
+    // Example usage of string functions
+    printf("strcpy: %s\n", strcpy(str1, str2));
+    printf("strlen: %lu\n", strlen(str1));
+    printf("strcat: %s\n", strcat(str1, " there!"));
+    printf("strcmp: %d\n", strcmp(str3, str4));
+    printf("strncat: %s\n", strncat(str5, " cruel world!", 5));
+    printf("strlwr: %s\n", strlwr(str1));
+    printf("strupr: %s\n", strupr(str1));
+    printf("strncpy: %s\n", strncpy(str6, "Hello", 5));
+    printf("stricmp: %d\n", stricmp(str3, str4));
+    printf("strcmpi: %d\n", strcmpi(str3, str4));
+    printf("strncmp: %d\n", strncmp(str1, str2, 5));
+    //printf("strnicmp: %d\n", strnicmp(str1, str6, 4));
+    printf("strdup: %s\n", strdup(str3));
+    printf("strchr: %s\n", strchr(str1, 't'));
+    printf("strrchr: %s\n", strrchr(str1, 'l'));
+    printf("strstr: %s\n", strstr(str1, "there"));
+    printf("strset: %s\n", strset(str1, '!'));
+    printf("strnset: %s\n", strnset(str1, '*', 4));
+    printf("strrev: %s\n", strrev(str1));
+
+    return 0;
+}
