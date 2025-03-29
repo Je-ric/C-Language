@@ -1,0 +1,33 @@
+User - payment method
+	-delete account with confirmation, if the user delete the account the reservations made by the user will be deleted and the payment will be returned and the quantity will also be returned
+	
+	- seat upgrade - if the user already have a reservation, the user can upgrade the seat. 
+
+- update information - the recent information will be display and below is the selection of what the user want to edit including the name, address, age, phone, email, username and password. And when the user select and input the new information, there is a confirmation if the user want to confirm to save changes or not.
+
+
+1. User/
+	1. Sign Up/
+	2. Log In/
+		1. Display Concerts/
+		2. Reserve Tickets
+		3. Manage Reservations/
+			1. View Reservation Details/
+			2. Delete Reservation/
+			3. Back/
+		4. Manage Account Information/
+			1. Update
+			2. Delete/
+		5. Back /
+	3. Back/
+2. Admin/
+	1. Display Concerts/
+		1. View Concert Details/
+		2. View Quantities Left/
+		3. View Concert Reservations/
+		4. Delete Concert/
+		5. Back/
+	2. Add Concert/
+	3. Manage User Accounts
+	4. Logout/
+3. Exit/
