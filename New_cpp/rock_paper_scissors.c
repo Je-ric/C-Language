@@ -9,14 +9,14 @@
 
 int main()
 {
-  // seed the random number generator with the current time to get different 
+  // seed the random number generator with the current time to get different
   // random numbers each time the program is run
-  srand( time(NULL) );
-  
+  srand(time(NULL));
+
   int player_throw = 0;
   int ai_throw = 0;
   bool draw = false;
-  
+
   do
   {
     // accept the player throw
@@ -26,11 +26,11 @@ int main()
     printf("3) Scissors\n");
     printf("Selection: ");
     scanf("%d", &player_throw);
-    
-    // randomly generate the AI throw (where 1-3 represent rock/paper/scissors 
+
+    // randomly generate the AI throw (where 1-3 represent rock/paper/scissors
     // as defined above)
     ai_throw = (rand() % 3) + 1;
-    
+
     // output the AI's throw to the player
     if (ai_throw == ROCK)
       printf("\nAI throws ROCK.\n");
@@ -38,7 +38,7 @@ int main()
       printf("\nAI throws PAPER.\n");
     else if (ai_throw == SCISSORS)
       printf("\nAI throws SCISSORS.\n");
-    
+
     // determine and output the winner, if any
     draw = false;
     if (player_throw == ROCK && ai_throw == SCISSORS)
@@ -59,8 +59,8 @@ int main()
       printf("\nDRAW! Play again.\n\n");
       draw = true;
     }
-  
-  // in the case of a draw, the game is played again until there is a winner
+
+    // in the case of a draw, the game is played again until there is a winner
   } while (draw);
 
   return 0;
