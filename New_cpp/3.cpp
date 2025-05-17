@@ -9,16 +9,16 @@ int main()
     // Seed random number generator
     srand(time(0));
 
-    printf("ROCK, PAPER, SCISSORS GAME\\n");
-    printf("1. Rock\\n");
-    printf("2. Paper\\n");
-    printf("3. Scissors\\n");
+    printf("ROCK, PAPER, SCISSORS GAME\n");
+    printf("1. Rock\n");
+    printf("2. Paper\n");
+    printf("3. Scissors\n");
     printf("Enter your choice (1-3): ");
     scanf("%d", &user_choice);
 
     if (user_choice < 1 || user_choice > 3)
     {
-        printf("Invalid choice!\\n");
+        printf("Invalid choice!\n");
         return 1;
     }
 
@@ -29,13 +29,13 @@ int main()
     switch (user_choice)
     {
     case 1:
-        printf("Rock\\n");
+        printf("Rock\n");
         break;
     case 2:
-        printf("Paper\\n");
+        printf("Paper\n");
         break;
     case 3:
-        printf("Scissors\\n");
+        printf("Scissors\n");
         break;
     }
 
@@ -43,30 +43,30 @@ int main()
     switch (computer_choice)
     {
     case 1:
-        printf("Rock\\n");
+        printf("Rock\n");
         break;
     case 2:
-        printf("Paper\\n");
+        printf("Paper\n");
         break;
     case 3:
-        printf("Scissors\\n");
+        printf("Scissors\n");
         break;
     }
 
     // Determine winner
     if (user_choice == computer_choice)
     {
-        printf("It's a tie!\\n");
+        printf("It's a tie!\n");
     }
     else if ((user_choice == 1 && computer_choice == 3) ||
              (user_choice == 2 && computer_choice == 1) ||
              (user_choice == 3 && computer_choice == 2))
     {
-        printf("You win!\\n");
+        printf("You win!\n");
     }
     else
     {
-        printf("Computer wins!\\n");
+        printf("Computer wins!\n");
     }
 
     return 0;
